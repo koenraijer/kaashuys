@@ -155,7 +155,7 @@
 		position: absolute;
 		top: 0;
 		right: -2rem;
-		height: calc(100% - $vertical-rhythm);
+		height: calc(100% - ($vertical-rhythm));
 		// Increase width to allow movement to the right to counteract wrapper margin
 		width: calc(100% + 2* $horizontal-rhythm);
 	}
