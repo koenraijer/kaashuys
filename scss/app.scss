@@ -1,0 +1,14 @@
+@import "./mixins.scss";
+@import "./normalize.scss";
+@import "./variables.scss";
+
+@import "./base.scss";
+@import "./animations.scss";
+
+/* Scoped to Footer.svelte
+@import "./components/footer";
+*/
+
+/* Scoped to Header.svelte
+@import "./components/nav";
+*/

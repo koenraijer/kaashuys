@@ -1,0 +1,26 @@
+footer {
+    .full-bleed {
+        position: absolute;
+        top: -($vertical-rhythm * 2); 
+        z-index: -1;
+        height: calc(100% + $vertical-rhythm);
+        background: $footer-background-color;
+        padding: calc($vertical-rhythm * 2) 0 $vertical-rhythm;
+        overflow: hidden;
+    }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    justify-items: center;
+    align-items: start;
+    transform: translateY($vertical-rhythm);
+    margin: calc($vertical-rhythm * 2) 0 calc($vertical-rhythm * 2);
+    // Column positioning
+    div {
+        display: flex;
+        flex-flow: column nowrap;
+        padding-right: $horizontal-rhythm;
+    }
+    .right-column {
+        justify-self: center;
+    }
+}

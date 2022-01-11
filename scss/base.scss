@@ -1,0 +1,119 @@
+:root {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: $font-size;
+    line-height: $font-size * 1.5;
+    font-family: $font-text;
+    background: transparent;
+}
+
+
+body {
+    height: 100%;
+    width: 100vw;
+    margin: 0 -20px 0 -20px;
+    overflow-x: hidden;
+    z-index: -1;
+    background: transparent;
+    position: relative;
+    color: $text-color; 
+    background: $document-background-color;
+}
+
+main {
+    margin: $vertical-rhythm 0 $vertical-rhythm;
+    background: transparent;
+}
+
+// Use this to wrap all content on page. Apply top/bottom margins to children.
+.wrapper {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $horizontal-rhythm 0;
+    // For sticky footer
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    column-gap: 0;
+    footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+}
+
+// Use this to wrap individual components (e.g. this does not apply a min-height)
+.content {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding-left: $horizontal-rhythm;
+    padding-right: $horizontal-rhythm;
+}
+
+// Sections 
+section {
+    margin-bottom: 2*$vertical-rhythm;
+}
+
+// Full-bleed content
+.full-bleed {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+// Headers
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-header;
+    color: $header-color;
+    // Reset link styling for headers 
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+/* Links
+    - add .link class to parents that need link styling for children.
+*/
+p, span, .link {
+    a {
+        color: $link-color;
+        text-decoration: none;
+        font-weight: 500;
+        &:hover {
+            text-decoration: underline;
+        }
+        &:active {
+            color: $text-color;
+        }
+    }
+}
+
+// Button (used for links)
+.button {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    position: relative;
+    z-index: 10 !important;
+    transform: scale(1);
+    &:hover:after {
+        transform: scale(1.1);
+        
+    }
+    &:after {
+        content: ' ';
+        z-index: -5 !important;
+        transition: all 0.3s $ease-bounce;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: $light-element3;
+        border-radius: 10px;
+    }
+}
