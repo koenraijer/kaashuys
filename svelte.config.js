@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import vercel from '@sveltejs/adapter-vercel'
 import sveltePreprocess from 'svelte-preprocess';
 import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
@@ -23,7 +23,7 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter(),
+		adapter: vercel(),
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte'
 	}
